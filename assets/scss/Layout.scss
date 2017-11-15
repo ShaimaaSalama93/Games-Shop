@@ -1,0 +1,79 @@
+/*-----------Bootstrap------------*/
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+
+$FirstColor: #bcc72f;
+$SecondColor: #c7c7c7;
+$ThirdColor: #868686;
+$BlackColor: #232323;
+
+@mixin transition($val){
+  -webkit-transition: all #{$val}s ease-in;
+  -moz-transition: all #{$val}s ease-in;
+  -o-transition: all #{$val}s ease-in;
+  transition: all #{$val}s ease-in;
+}
+@mixin customButton($bgColor,$color,$BorderR,$paddingA,$paddingB,$marginA,$marginB){
+  background-color: $bgColor;
+  border: 0;
+  color: $color;
+  border-radius: #{$BorderR}px;
+  padding: #{$paddingA}px #{$paddingB}px ;
+  margin:#{$marginA}px #{$marginB}px;
+}
+@mixin background($img,$fix,$high){
+  background: url("../images/#{$img}")no-repeat center center #{$fix} ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: #{$high}px;
+  width: 100%;
+}
+@mixin Placeholder($HolderColor){
+  &::-webkit-input-placeholder {
+    color: $HolderColor !important;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $HolderColor !important;
+  }
+  &::-moz-placeholder {  /* Firefox 19+ */
+    color: $HolderColor !important;
+  }
+  &:-ms-input-placeholder {
+    color: $HolderColor !important;
+  }
+}
+
+body{
+  box-sizing: border-box;
+  overflow-x:hidden;
+}
+.Big-container{
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+.small-container{
+  width: 70%;
+  margin: 0 auto;
+}
+ul{
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  list-style: none;
+}
+button,input,input:focus, input:active{
+  outline:0;
+}
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+hr{
+  height: 2px;
+  background-color:white;
+  width: 100%;
+  border: none;
+  margin: 0;
+}

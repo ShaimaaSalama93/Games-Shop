@@ -1,0 +1,184 @@
+/*********toggle******/
+.load{
+  display: none;
+  background-color: rgba(0,0,0,0.3);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99999;
+  .Load-transparent{
+    width: 360px;
+    background-color: white;
+    height: 100%;
+    .Load-Login{
+      padding: 30px 10px;
+      a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 800;
+        color: $BlackColor;
+        @include transition(0.5);
+        svg{
+          width: 25px;
+          height: 25px;
+          fill: $ThirdColor;
+          margin-right: 40px;
+        }
+        &:hover{
+          color: $FirstColor;
+        }
+      }
+    }
+    .Load-Menu{
+      border-top: 2px solid $SecondColor;
+      border-bottom: 2px solid $SecondColor;
+      .nav {
+        margin: 0 0 0 70px;
+        li {
+          a {
+            font-size: 16px;
+            font-weight: 800;
+            margin: 30px 0;
+            padding: 0;
+            color: $BlackColor;
+            @include transition(0.5);
+            &:hover, &:focus {
+              background-color:transparent;
+              border-radius:10px ;
+              color: $FirstColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+/*****Header********/
+header{
+  hr{
+    background-color: $ThirdColor;
+  }
+  .Big-container{
+    background-color: #212121;
+    color: white;
+    padding: 10px 30px;
+    .header-left{
+      ul{
+        display: flex;
+        align-items: center;
+        li{
+          margin-right: 30px;
+          display: flex;
+          &:nth-child(1){
+            svg{
+              height:25px;
+              width: 25px;
+              fill:white;
+              cursor: pointer;
+            }
+          }
+          &:nth-child(2){
+            a{
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              div{
+                display: flex;
+                background-color: $FirstColor;
+                padding: 7px;
+                border-radius: 50%;
+                margin-right: 10px;
+               svg{
+                 height:35px;
+                 width: 35px;
+               }
+              }
+              span{
+                font-size: 22px;
+                color: white;
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-right{
+      display: flex;
+      justify-content: flex-end;
+
+      .Search{
+        padding: 10px;
+        background-color: $FirstColor;
+        border: none;
+        height: 40px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        @include Placeholder(white);
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        width: 250px;
+      }
+      .Search-Icon{
+        svg{
+          height:22px;
+          width: 22px;
+          fill:white;
+          cursor: pointer;
+          margin: 12px 0 0 10px;
+        }
+      }
+    }
+  }
+}
+/*****Nav**********/
+nav{
+  background-color:#464646 ;
+  .Big-container{
+    padding: 2px 70px;
+    .nav{
+      padding-left: 0;
+      display: flex;
+      li{
+        a {
+          color: $SecondColor;
+          padding: 15px;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: 600;
+          @include transition(0.5);
+          background-color: transparent;
+          &:hover{
+            color: white;
+            text-decoration: none;
+            background-color: transparent;
+            @include transition(0.5);
+          }
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0;
+            border-bottom: 4px solid $FirstColor;
+            bottom: -3px;
+            left: 0;
+            -webkit-transform: scaleX(0);
+            -ms-transform: scaleX(0);
+            transform: scaleX(0);
+            @include transition(0.4);
+          }
+          &:hover:before {
+            text-decoration: none;
+            -webkit-transform: scaleX(1);
+            -ms-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
